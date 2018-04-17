@@ -1,0 +1,95 @@
+$font-stack:    Helvetica, sans-serif
+
+/************************** COLORS **********************/
+
+$primary-color: #dadada
+$secondary-color: #395C73
+
+/************************** FONT SIZES **********************/
+
+$fontBig: 2rem
+$fontMed: 1.4rem
+$fontSmall: 1.2rem
+
+/************************** LINE HEIGHT **********************/
+
+$lineLarge: 3.5rem
+
+/************ MARGIN TO AVOID NAVIGATION OVERLAY *************/
+$margin-small: 40px
+$margin-large: 60px
+
+/************************** INCLUDES *************************/
+@import mixin_mediaqueries.sass
+
+#fp-nav.right
+	right: 0
+
+	@include notSmartphone
+		right: 17px
+
+.verticalBarWrapper
+	display: none
+
+	@include notSmartphone
+		display: flex
+		height: 100%
+		position: absolute
+		flex-direction: column
+		justify-content: space-around
+		right: 29px
+		z-index: 100
+
+	.verticalBar
+		height: 200px
+		width: 3px
+		border-radius: 100px
+		background-color: black
+
+
+body
+	font: 100% $font-stack
+	color: $primary-color
+
+
+	ul
+		padding: 0
+		li 
+			list-style: none
+
+	header
+		display: none			// remove here
+		width: 200px
+		position: absolute
+		background-color: black
+		opacity: 0.2
+		z-index: 999
+
+		nav
+			ul
+				padding-left: 1rem
+				li
+					font-size: $fontBig
+					line-height: $lineLarge
+
+	.homeContentWrapper
+		width: 100%
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+
+		.logoWrapper
+			width: 40%
+			max-width: 300px
+			margin-right: 50px
+
+			@include notSmartphone
+				margin-right: 100px
+
+		.subtitle
+			margin-right: 50px
+			font-size: $fontMed
+			color: $secondary-color
+			
+			@include notSmartphone
+				margin-right: 100px
