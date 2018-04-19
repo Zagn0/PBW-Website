@@ -13,3 +13,11 @@ $desktop-width: 1025px
 @mixin notSmartphone
     @media (min-width: #{$smartphone-width})
         @content
+
+@mixin isTouch 
+    @media (pointer: coarse)
+        @content
+
+@mixin notTouch
+    @media (pointer: fine)
+        @content

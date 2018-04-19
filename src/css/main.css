@@ -34,7 +34,6 @@ body {
     body ul li {
       list-style: none; }
   body header {
-    display: none;
     width: 200px;
     position: absolute;
     background-color: black;
