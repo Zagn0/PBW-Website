@@ -34,6 +34,7 @@ body {
     body ul li {
       list-style: none; }
   body header {
+    display: none;
     width: 200px;
     position: absolute;
     background-color: black;
@@ -44,6 +45,16 @@ body {
       body header nav ul li {
         font-size: 2rem;
         line-height: 3.5rem; }
+  body .section {
+    padding: 15px; }
+    @media (min-width: 600px) {
+      body .section {
+        padding: 25px; } }
+    @media (min-width: 1025px) {
+      body .section {
+        padding: 100px; } }
+  body .text-title {
+    font-size: 2rem; }
   body .homeContentWrapper {
     width: 100%;
     display: flex;
@@ -63,5 +74,22 @@ body {
       @media (min-width: 600px) {
         body .homeContentWrapper .subtitle {
           margin-right: 100px; } }
+
+#first {
+  display: flex; }
+  #first #text-wrapper-sec1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    width: 100%;
+    text-align: right; }
+    @media (min-width: 1025px) {
+      #first #text-wrapper-sec1 .text-body {
+        width: 50%; } }
+  #first #img-small {
+    max-width: 200px; }
+  #first #img-big {
+    max-width: 400px; }
 
 /*# sourceMappingURL=main.css.map */

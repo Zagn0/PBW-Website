@@ -58,7 +58,7 @@ body
 			list-style: none
 
 	header
-		// display: none			// remove here
+		display: none			// remove here
 		width: 200px
 		position: absolute
 		background-color: black
@@ -71,6 +71,17 @@ body
 				li
 					font-size: $fontBig
 					line-height: $lineLarge
+
+	.section
+		padding: 15px
+
+		@include notSmartphone
+			padding: 25px
+		@include desktop
+			padding: 100px
+
+	.text-title
+		font-size: $fontBig
 
 	.homeContentWrapper
 		width: 100%
@@ -93,3 +104,26 @@ body
 			
 			@include notSmartphone
 				margin-right: 100px
+
+#first 
+
+	display: flex
+
+	#text-wrapper-sec1
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		align-items: flex-end
+		width: 100%
+		text-align: right
+
+		.text-body
+			@include desktop
+				width: 50%
+
+
+	#img-small
+		max-width: 200px
+
+	#img-big
+		max-width: 400px
